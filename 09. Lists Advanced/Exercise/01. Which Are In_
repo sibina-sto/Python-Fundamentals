@@ -1,0 +1,13 @@
+# Ines
+
+substrings = input().split(', ')
+words = input().split(', ')
+
+occ_substrings = []
+
+for substr in substrings:
+    for word in words:
+        if substr in word:
+            occ_substrings.append(substr)
+
+print(sorted(set(occ_substrings), key=occ_substrings.index))

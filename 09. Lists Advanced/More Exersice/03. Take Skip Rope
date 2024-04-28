@@ -1,0 +1,15 @@
+encrypted = input()
+message = []
+
+non_numeric = [i for i in encrypted if not i.isnumeric()]
+numeric = [int(i) for i in encrypted if i.isnumeric()]
+take = [val for i, val in enumerate(numeric) if i % 2 == 0]
+skip = [val for i, val in enumerate(numeric) if i % 2 != 0]
+
+for t, s in zip(take, skip):
+    processed = t + s
+    message.append(non_numeric[:t])
+    del non_numeric[:processed]
+
+message = sum(message, [])
+print(''.join(message))
