@@ -1,0 +1,24 @@
+# Ines
+
+data = input()
+
+products_price = {}
+products_quantity = {}
+
+while not data == 'buy':
+    name, price, quantity = data.split()
+    price = float(price)
+    quantity = int(quantity)
+
+    if name not in products_price:
+        products_price[name] = price
+        products_quantity[name] = quantity
+    else:
+        products_price[name] = price
+        products_quantity[name] += quantity
+
+    data = input()
+
+for product, price in products_price.items():
+    result = price * products_quantity[product]
+    print(f'{product} -> {result:.2f}')

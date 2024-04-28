@@ -1,0 +1,11 @@
+# Ines
+
+data = input().split()
+prod = {}
+
+for index in range(0, len(data), 2):
+    key = data[index]
+    quantity = int(data[index + 1])
+    prod[key] = quantity
+
+print(prod)

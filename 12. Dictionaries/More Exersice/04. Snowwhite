@@ -1,0 +1,23 @@
+dwarfs = {}
+hat_colors = {}
+
+while True:
+    command = input()
+    if command == 'Once upon a time':
+        break
+
+    name, hat_color, physics = command.split(' <:> ')
+
+    if (name, hat_color) not in dwarfs:
+        dwarfs[(name, hat_color)] = int(physics)
+        if hat_color not in hat_colors:
+            hat_colors[hat_color] = 0
+        hat_colors[hat_color] += 1
+
+    elif int(physics) > dwarfs[(name, hat_color)]:
+        dwarfs[(name, hat_color)] = int(physics)
+
+dwarfs = dict(sorted(dwarfs.items(), key=lambda x: (x[1], hat_colors[x[0][1]]), reverse=True))
+
+for dwarf, physics in dwarfs.items():
+    print(f'({dwarf[1]}) {dwarf[0]} <-> {physics}')

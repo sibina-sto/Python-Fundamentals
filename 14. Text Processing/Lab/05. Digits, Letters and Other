@@ -1,0 +1,19 @@
+# Ines
+
+numbers = ''
+letters = ''
+symbols = ''
+
+text = input()
+
+for char in text:
+    if char.isdigit():
+        numbers += char
+    elif char.isalpha():
+        letters += char
+    else:
+        symbols += char
+
+print(numbers)
+print(letters)
+print(symbols)
