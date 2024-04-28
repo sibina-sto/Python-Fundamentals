@@ -1,0 +1,11 @@
+# МОЕ РЕШЕНИЕ #
+
+n = input()
+n_as_list = list(str(n))
+max_number = ""
+
+while len(n_as_list) > 0:
+    max_number += max(n_as_list)
+    n_as_list.remove(max(n_as_list))
+
+print(max_number)

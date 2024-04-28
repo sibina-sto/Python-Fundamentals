@@ -1,0 +1,18 @@
+# string = input()
+# output = ''
+
+# for ch in string:
+#     output += ch*2
+
+# print(output)
+
+# РЕШЕНИЕ ИНЕС
+
+text = input()
+
+result_text = ''
+
+for char in text:
+    result_text += char * 2
+
+print(result_text)

@@ -1,0 +1,8 @@
+n = int(input())
+magic_nums = [5, 7, 11]
+
+for i in range(1, n + 1):
+    if sum(map(int, str(i))) in magic_nums:
+        print(f"{i} -> True")
+    else:
+        print(f"{i} -> False")

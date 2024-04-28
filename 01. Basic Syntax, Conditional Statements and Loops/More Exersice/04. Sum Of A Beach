@@ -1,0 +1,9 @@
+#  МОЕ РЕШЕНИЕ - 100/100
+
+string = input().lower()
+
+a = [i for i in range(len(string)) if string.startswith('sun', i)]
+b = [i for i in range(len(string)) if string.startswith('fish', i)]
+c = [i for i in range(len(string)) if string.startswith('sand', i)]
+d = [i for i in range(len(string)) if string.startswith('water', i)]
+print(len(a) + len(b) + len(c) + len(d))

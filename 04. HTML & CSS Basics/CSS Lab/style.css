@@ -1,0 +1,49 @@
+body {
+    background-color: beige;
+    font-family: 'Lato', sans-serif;
+  }
+
+h1 {
+    color: yellowgreen;
+}
+
+p {
+    color: darkmagenta; font-size: 24px;
+}
+
+.quoted-text {
+    font-style: italic;
+    font-size: 18px;
+    color: gray
+}
+
+#special-quote {
+    background-color: pink;
+}
+
+.slogan {
+    font-weight: bold;
+}
+
+.navigation {
+    list-style: none;
+}
+
+.navigation li {
+    display: inline;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    background-color: darkcyan;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 10px;
+    border: 1 px solid darkgoldenrod;
+}
+
+.navigation a:hover {
+    transform: scale(1.2);
+}

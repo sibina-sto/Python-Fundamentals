@@ -1,0 +1,10 @@
+first_word = input()
+second_word = input()
+
+mutate_word = ''
+
+for i in range(len(first_word)):
+    mutate_word = second_word[:i + 1] + first_word[i + 1:]
+    if mutate_word != first_word:
+        first_word = mutate_word
+        print(first_word)
