@@ -1,0 +1,25 @@
+# Elies
+
+import re
+
+our_dict = {}
+letters = r'[^0-9+\-*\/\.]'
+numbers = r'[+-]?\d+\.?\d*'
+split = r"\s*,\s*"
+line = sorted(re.split(split, input()))
+
+for l in line:
+    multiplies_count = l.count("*")
+    divides_count = l.count("/")
+
+    health = sum([ord(c.group()) for c in re.finditer(letters, l)])
+    damage = sum([float(c.group()) for c in re.finditer(numbers, l)])
+    for i in range(0, multiplies_count):
+        damage *= 2
+    for i in range(0, divides_count):
+        damage /= 2
+
+    our_dict[l] = [health, damage]
+
+for key, value in sorted(our_dict.items(), key=lambda x: x[0]):
+    print(f"{key} - {value[0]} health, {value[1]:.2f} damage")

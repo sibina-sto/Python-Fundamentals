@@ -1,0 +1,14 @@
+# Ines
+
+import re
+
+text_line = input()
+pattern = r"\d+"
+all_nums = []
+
+while text_line:
+    nums = re.findall(pattern, text_line)
+    all_nums.extend(nums)
+    text_line = input()
+
+print(*all_nums)

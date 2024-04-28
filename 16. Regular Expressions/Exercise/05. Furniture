@@ -1,0 +1,22 @@
+# Emma Hristova 
+
+import re
+
+pattern = r'^>>(?P<furniture>\w+)<<(?P<price>\d+(\.\d+)?)!(?P<quantity>\d+)$'
+bought_furniture = []
+total_money_spend = 0
+
+while True:
+    string = input()
+    if string == 'Purchase':
+        break
+    match = re.match(pattern, string)
+    if match:
+        purchase = match.groupdict()
+        bought_furniture.append(purchase['furniture'])
+        total_money_spend += float(purchase['price']) * int(purchase['quantity'])
+
+print("Bought furniture:")
+for f in bought_furniture:
+    print(f)
+print(f"Total money spend: {total_money_spend:.2f}")

@@ -1,0 +1,11 @@
+# Ines
+
+import re
+
+text = input()
+searched_word = input()
+
+pattern = rf"\b{searched_word}\b"
+count_word = re.findall(pattern, text, re.IGNORECASE)
+
+print(len(count_word))
