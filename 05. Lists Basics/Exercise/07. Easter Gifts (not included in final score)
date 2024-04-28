@@ -1,0 +1,16 @@
+initial_input = input()
+gifts = initial_input.split()
+current_command = input()
+
+while current_command != "No Money":
+    if "OutOfStock" in current_command:
+        gifts = ["None" if x == current_command.split()[1] else x for x in gifts]
+    if "Required" in current_command and -1 < int(current_command.split()[2]) < len(gifts):
+        gifts[int(current_command.split()[2])] = current_command.split()[1]
+    if "JustInCase" in current_command:
+        gifts[len(gifts)-1] = current_command.split()[1]
+    current_command = input()
+
+for gift in gifts:
+    if gift != "None":
+        print(gift, end=' ')

@@ -1,0 +1,12 @@
+# Ines
+
+def check_if_palindrome(el):
+    if el == el[::-1]:
+        return True
+    return False
+
+
+nums_as_strings = input().split(', ')
+
+for nums_as_str in nums_as_strings:
+    print(check_if_palindrome(nums_as_str))

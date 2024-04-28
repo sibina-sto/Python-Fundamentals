@@ -1,0 +1,18 @@
+cells = input().split("#")
+water = float(input())
+effort = 0
+total_price = 0
+print("Cells:")
+for c in cells:
+    isTrue = False
+    cell = c.split(" = ")
+    if (cell[0] == "Low" and 1 <= int(cell[1]) <= 50) or (cell[0] == "Medium" and 51 <= int(cell[1]) <= 80) or (cell[0] == "High" and 81 <= int(cell[1]) <= 125):
+        isTrue = True
+    if isTrue:
+        if water >= int(cell[1]):
+            water -= int(cell[1])
+            print(f"- {cell[1]}")
+            effort += 0.25 * int(cell[1])
+            total_price += int(cell[1])
+print(f'Effort: {effort:.2f}')
+print(f"Total Fire: {int(total_price)}")

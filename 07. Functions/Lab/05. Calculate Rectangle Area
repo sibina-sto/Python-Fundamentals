@@ -1,0 +1,7 @@
+def solve(w, h):
+    return w * h 
+
+w = int(input())
+h = int(input())
+
+print(solve(w, h))

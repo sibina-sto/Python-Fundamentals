@@ -1,0 +1,12 @@
+input_info = input().split(', ')
+int_numbers = []
+
+for i in input_info:
+    if int(i) == 0:
+        input_info.remove(i)
+        input_info.append(i)
+
+for i in input_info:
+    int_numbers.append(int(i))
+
+print(int_numbers)

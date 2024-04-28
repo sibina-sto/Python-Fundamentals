@@ -1,0 +1,11 @@
+cards = input().split(" ")
+shuffle_count = int(input())
+mid = len(cards) // 2
+
+for shuffle in range(shuffle_count):
+    result = []
+    for i in range(mid):
+        result.append(cards[i])
+        result.append(cards[i + mid])
+    cards = result
+print(result)
